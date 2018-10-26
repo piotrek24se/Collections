@@ -8,7 +8,7 @@ public interface Stack <T> {
     // Get and delete from stack
     T pop ();
 
-    // Get withot delete from stack
+    // Get without delete from stack
     T poll ();
 
     // Is empty collection - true if no elements on stack

@@ -56,6 +56,19 @@ public class Zadania {
         return sizeOfSet;
     }
 
+    // zadanie 5 (moje rozwiazanie) - do dokonczenia
+
+    Map<String, Integer> indexesOfSigns = new HashMap<>();
+
+    String wordToMap = "mdkmafdkmfk";
+
+    Character[] charactersArray = new Character[wordToMap.length()];
+
+    List<Integer> listOfSigns = new ArrayList<>();
+
+
+
+
 
 
 
@@ -146,7 +159,7 @@ public class Zadania {
 
         // zadanie 5 (moje rozwiazanie)
 
-        
+
 
     }
 

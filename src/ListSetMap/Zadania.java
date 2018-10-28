@@ -1,12 +1,14 @@
 package ListSetMap;
 
+import com.sun.xml.internal.fastinfoset.util.CharArray;
+
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Zadania {
 
-    // add zadanie 2
+    // add zadanie 2 (moje rozwiazanie)
 
     private static String convertKey(String key) {
 
@@ -14,13 +16,13 @@ public class Zadania {
         return newKey;
     }
 
-    // zadanie 3
+    // add zadanie 3 (moje rozwiazanie)
 
     private static String polishToEnglish(String polishWord, Map<String, String> translator) {
 
         if (translator.containsKey(polishWord)) {
             return translator.get(polishWord);
-        } else return "Brak hasla w slowniku";
+        } else return polishWord;
     }
 
     private static String polishToEnglishSentence(String polishSentence, Map<String, String> translator) {
@@ -31,10 +33,39 @@ public class Zadania {
         for (int i = 0; i < list.length; i++) {
             if (translator.containsKey(list[i])) {
                 translatedSentence = translatedSentence + " " + translator.get(list[i]);
-            } else return "Brak hasla w slowniku";
+            } else translatedSentence = translatedSentence + " " + list[i];
         }
         return translatedSentence.trim();
     }
+
+    // add zadanie 4 (moje rozwiazanie)
+
+    private static Integer uniqueSignsNumber (String sentence) {
+
+        char [] uniqueValuesArray = sentence.toCharArray();
+
+        Set<Character> uniqueValues = new HashSet<>();
+
+        for (Character chars: uniqueValuesArray) {
+            uniqueValues.add(chars);
+        }
+
+        int sizeOfSet = uniqueValues.size();
+        System.out.println(uniqueValues);
+
+        return sizeOfSet;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     public static void main(String[] args) {
 
@@ -108,6 +139,14 @@ public class Zadania {
         System.out.println(polishToEnglish("pies", translator));
 
         System.out.println(polishToEnglishSentence("moj pies", translator));
+
+        // zadanie 4 (moje rozwiazanie)
+
+        uniqueSignsNumber("AALABBBB");
+
+        // zadanie 5 (moje rozwiazanie)
+
+        
 
     }
 

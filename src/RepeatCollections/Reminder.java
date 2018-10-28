@@ -39,6 +39,21 @@ public class Reminder {
     public static void main(String[] args) {
         streamConvert();
         sortedSetConvert();
+
+        List<String> list = new ArrayList<>();
+        list.add("dsds0");
+        list.add("dsfdfs0");
+        list.add("ddb");
+        list.add("ioio0");
+        list.add("mnmnb");
+
+        // zadanie 3
+
+        String result = list.stream().reduce((a, b) -> a.trim().toUpperCase() + " " + b.trim().toUpperCase()).orElse("empty");
+
+        // zadanie 3 koniec
+
+        System.out.println(result);
     }
 
     private static void streamConvert() {

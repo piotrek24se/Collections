@@ -61,7 +61,7 @@ public class Main {
 
         SearchAlgorithm binaryRec = new BinarySearchRec();
         int binaryRecResult = binaryRec.search(5, ints1);
-        System.out.println("Binary rec " + binaryRecResult);
+        System.out.println("Binary rec: " + binaryRecResult);
 
 
     }

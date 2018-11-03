@@ -4,11 +4,11 @@ import searchAlgorithms.SearchAlgorithm;
 
 import java.util.List;
 
-public class BinarySearchIter implements SearchAlgorithm {
+public class BinarySearchIter<T extends Comparable<T>> implements SearchAlgorithm <T> {
 
 
     @Override
-    public Integer search(Integer value, List<Integer> input) {
+    public Integer search(T value, List<T> input) {
         return null;
     }
 
@@ -27,15 +27,15 @@ public class BinarySearchIter implements SearchAlgorithm {
 
 
     @Override
-    public Integer search(Integer value, Integer[] input) {
+    public Integer search(T value, T[] input) {
         int low = 0;
         int high = input.length - 1;
 
         while (low <= high) {
             int mid = (low + high) / 2;
-            if (input[mid] > value) {
+            if (input[mid].compareTo(value) > 0) {
                 high = mid - 1;
-            } else if (input[mid] < value) {
+            } else if (input[mid].compareTo(value) < 0) {
                 low = mid + 1;
             } else return mid;
         }

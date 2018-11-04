@@ -1,14 +1,12 @@
 package Algorithms;
 
-import Queues.Person;
-
-public class Osoba  implements Comparable<Osoba>{
+public class Person implements Comparable<Person>{
 
     private String name;
     private String surname;
-    private int age;
+    private Long age;
 
-    public Osoba(String name, String surname, int age) {
+    public Person(String name, String surname, Long age) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -30,21 +28,30 @@ public class Osoba  implements Comparable<Osoba>{
         this.surname = surname;
     }
 
-    public int getAge() {
+    public Long getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Long age) {
         this.age = age;
     }
 
     @Override
-    public int compareTo(Osoba o) {
-        if (age > o.getAge()){
-            return 1;
-        } else if (age < o.getAge()) {
-            return -1;
-        } else return 0;
+    public boolean equals(Object obj) {
 
+        if(obj instanceof Person) {
+            return this.age.equals(((Person) obj).getAge());
+        }
+        return super.equals(obj);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if (this.age > o.getAge()){
+            return 1;
+        } else if (this.age < o.getAge()) {
+            return -1;
+        }
+        return 0;
     }
 }

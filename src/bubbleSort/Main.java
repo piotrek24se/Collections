@@ -1,6 +1,7 @@
 package bubbleSort;
 
 import searchAlgorithms.SortingAlgorithm;
+import selectionSort.SelectionSortAlgorithm;
 
 import java.util.Arrays;
 

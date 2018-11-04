@@ -4,7 +4,7 @@ public class MainSelectionSort {
 
     public static void main(String[] args) {
 
-        int[] ints = new int[]{1, 5, 6, 2, 0, 11, 10};
+        int[] ints = new int[]{1, 5, 6, 2, 1, 11, 0};
 
         getMin(ints);
 
@@ -12,14 +12,13 @@ public class MainSelectionSort {
     }
 
 
-
-
     // zadanie 1 (metoda do wyszukiwania wartosci min)
 
     public static int getMin(int[] ints) {
 
-        int min = ints[0];
         int index = 0;
+        int min = ints[index];
+
 
         for (int i = 1; i < ints.length; i++) {
             if (ints[i] < min) {
@@ -30,26 +29,30 @@ public class MainSelectionSort {
 
         System.out.println("Wartosc minimalna: " + min + " " + "Index: " + index);
 
-        return min;
+        return index;
     }
 
     // zadanie 2
 
     public static int getMinFromAToB(int[] ints, int a, int b) {
 
-        int min = ints[a];
-        int index = a;
+        if (a <= b && a < ints.length && b < ints.length && a >= 0 && b >= 0) {
 
-        for (int i = a + 1; i < b + 1; i++) {
-            if (ints[i] < min) {
-                min = ints[i];
-                index = i;
+            int min = ints[a];
+            int index = a;
+
+            for (int i = a + 1; i < b + 1; i++) {
+                if (ints[i] < min) {
+                    min = ints[i];
+                    index = i;
+                }
             }
+
+            System.out.println("Wartosc minimalna w zakresie od " + a + " do " + b + ": " + min + " " + "Index: " + index);
+
+            return index;
         }
-
-        System.out.println("Wartosc minimalna w zakresie od " + a + " do " + b + ": "+ min + " " + "Index: " + index);
-
-        return min;
+        return -1;
     }
 
 }

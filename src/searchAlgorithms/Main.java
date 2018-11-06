@@ -1,7 +1,7 @@
 package searchAlgorithms;
 
-import Algorithms.BinarySearchIter;
-import Algorithms.BinarySearchRec;
+import algorithms.BinarySearchIter;
+import algorithms.BinarySearchRec;
 
 public class Main {
 

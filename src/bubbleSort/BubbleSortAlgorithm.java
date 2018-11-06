@@ -1,9 +1,7 @@
 package bubbleSort;
 
-import Algorithms.MainPerson;
 import searchAlgorithms.SortingAlgorithm;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 

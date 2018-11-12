@@ -1,0 +1,3 @@
+Tomasz;Nowicki;operator;455
+Adam;Nowak;laborant;515
+Jan;Nowak;kierownik;545

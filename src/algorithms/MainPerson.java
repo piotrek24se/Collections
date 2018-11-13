@@ -1,6 +1,9 @@
 package algorithms;
 
+import searchAlgorithms.LinearSearch;
 import searchAlgorithms.SearchAlgorithm;
+
+import java.util.List;
 
 public class MainPerson {
 
@@ -12,18 +15,27 @@ public class MainPerson {
                 new Person("E", "F", 14L),
                 new Person("G", "H", 15L),
                 new Person("I", "J", 16L),
-                new Person("K", "L", 17L),
+                new Person("K", "L", 14L),
         };
 
-        // zmodyfikowac zgodnie z git ponizsza czesc
+        // binary search
 
-        SearchAlgorithm<Person> binarySearch = new BinarySearchRec<>();
+//        SearchAlgorithm<Person> binarySearch = new BinarySearchRec<>();
+//
+//        int result = binarySearch.search(new Person("E", "F", 12L), personArray);
+//
+//        System.out.println("Result: " + result);
 
-        int result = binarySearch.search(new Person("E", "F", 14L), personArray);
+        // linear search
+
+        LinearSearch<Person> linearSearch =
+                new LinearSearch<>();
+
+        List<Integer> result = linearSearch.searchAll(
+                new Person("E", "F", 14L),
+                personArray);
 
         System.out.println("Result: " + result);
 
-
     }
-
 }

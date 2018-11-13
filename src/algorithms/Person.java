@@ -42,7 +42,7 @@ public class Person implements Comparable<Person>{
         if(obj instanceof Person) {
             return this.age.equals(((Person) obj).getAge());
         }
-        return super.equals(obj);
+        return false;
     }
 
     @Override

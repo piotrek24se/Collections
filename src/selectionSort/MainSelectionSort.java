@@ -8,7 +8,6 @@ public class MainSelectionSort {
 
         getMin(ints);
 
-        getMinFromAToB(ints, 0, 4);
     }
 
 
@@ -32,26 +31,37 @@ public class MainSelectionSort {
         return index;
     }
 
+    // zadanie 1 rozwiazanie z zajec
+
+    private int min(int[] array) {
+
+        int minIndex = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < array[minIndex]) {
+                minIndex = i;
+            }
+        }
+
+        return minIndex;
+    }
+
     // zadanie 2
 
-    public static int getMinFromAToB(int[] ints, int a, int b) {
+    public int minFromAToB(int[] array, int a, int b) {
+        if (a <= b && a < array.length && b < array.length && a >=0 && b >= 0) {
 
-        if (a <= b && a < ints.length && b < ints.length && a >= 0 && b >= 0) {
+            int minIndex = a;
 
-            int min = ints[a];
-            int index = a;
-
-            for (int i = a + 1; i < b + 1; i++) {
-                if (ints[i] < min) {
-                    min = ints[i];
-                    index = i;
+            for (int i = a; i <= b; i++) {
+                if (array[i] < array[minIndex]) {
+                    minIndex = i;
                 }
             }
 
-            System.out.println("Wartosc minimalna w zakresie od " + a + " do " + b + ": " + min + " " + "Index: " + index);
-
-            return index;
+            return minIndex;
         }
+
         return -1;
     }
 

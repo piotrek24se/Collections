@@ -33,4 +33,10 @@ public class BubbleSortAlgorithm extends Main implements SortingAlgorithm {
         }
         return result;
     }
+
+    private void swap(Integer[] array, int a, int b) {
+        int tmp = array[a];
+        array[a] = array[b];
+        array[b] = tmp;
+    }
 }

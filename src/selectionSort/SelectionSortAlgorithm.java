@@ -7,8 +7,6 @@ import java.util.List;
 
 public class SelectionSortAlgorithm implements SortingAlgorithm {
 
-    // poprawic - nie dziala poprawnie (git)
-
     @Override
     public List<Integer> sort(List<Integer> input) {
         return null;

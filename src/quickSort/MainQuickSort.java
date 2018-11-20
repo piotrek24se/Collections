@@ -187,20 +187,6 @@ public class MainQuickSort {
     }
 
     // zadanie 5 (*Napisz metodę która będzie ustawiać elementy mniejsze po lewej stronie środkowego elementu, a większe po prawej np [2,9,8,5,4,7,6] -> środkowy element 5 -> [2,4,5,9,8,7,6])
-    // niedokonczony moj sposob
-
-//    private static List<Integer> getMiddleSortedList (int[] ints) {
-//
-//        List<Integer> list = new ArrayList<>();
-//
-//        int midValue = getMiddle(ints);
-//
-//        Integer[] summaryArray;
-//
-//        summaryArray = Arrays.copyOf(lowerArray(ints), ints.length);
-//        summaryArray = Arrays.copyOf(summaryArray);
-//
-//    }
 
     // zadanie 5 (rozwiazanie z zajec - petle - dziala tylko dla tablicy wartosci unikalnych)
 

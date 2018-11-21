@@ -47,14 +47,11 @@ public class HeapMain {
 
         // implementacja HeapSortAlgorithm
 
-        HeapSortAlgorithm heapSortAlgorithm = new HeapSortAlgorithm();
-
-        int[] treeForBuildHeap = new int[]{5, 9, 12, 4, 13, 81, 65};
-
-        System.out.println(Arrays.toString(heapSortAlgorithm.buildHeap(treeForBuildHeap)));
-        System.out.println("------------------------------");
-
-        // uzupelnic rozbieranie kopca z git
+        Integer[] treeForBuildHeap = new Integer[]{5, 9, 12, 12, 12, 4, 13, 81, 65};
+        BuildHeap.execute(treeForBuildHeap);
+        System.out.println("Heap: " + Arrays.toString(treeForBuildHeap));
+        ShiftHeap.execute(treeForBuildHeap);
+        System.out.println("Sorted heap: " + Arrays.toString(treeForBuildHeap));
 
     }
 
